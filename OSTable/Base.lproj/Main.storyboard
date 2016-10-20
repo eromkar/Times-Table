@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpL-lE-xc2">
+                                <rect key="frame" x="30" y="28" width="164" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-4D-TfR">
+                                <rect key="frame" x="224" y="30" width="164" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-WH-E7H">
+                                <rect key="frame" x="171" y="87" width="73" height="36"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=compact" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="heightClass=regular" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="heightClass=compact-widthClass=compact" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="heightClass=compact-widthClass=regular" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="heightClass=regular-widthClass=regular" preservesSuperviewLayoutMargins="NO"/>
+                                <connections>
+                                    <action selector="ButtonCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0aQ-dm-0fj"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="giz-GC-zR9">
+                                <rect key="frame" x="20" y="150" width="374" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="555" id="WMZ-zj-VML"/>
+                                    <constraint firstAttribute="width" secondItem="giz-GC-zR9" secondAttribute="height" multiplier="374:555" id="g4w-Ve-tyS"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="07y-Vw-c8m"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="204" id="0BA-oA-oZm"/>
+                            <constraint firstItem="1jQ-WH-E7H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="184-8W-jic"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1jQ-WH-E7H" secondAttribute="trailing" constant="150" id="2Fp-lG-MYq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="giz-GC-zR9" secondAttribute="bottom" constant="31" id="3su-MM-NAS"/>
+                            <constraint firstItem="tpL-lE-xc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="7Ut-KO-HIX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="giz-GC-zR9" secondAttribute="trailing" id="B9k-dP-90a"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="leading" secondItem="tpL-lE-xc2" secondAttribute="trailing" constant="30" id="EYW-YR-e6I"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="JDe-jW-lMl"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="leading" secondItem="tpL-lE-xc2" secondAttribute="trailing" constant="30" id="LUT-tJ-5qS"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="M7s-8L-cxj"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="centerY" secondItem="tpL-lE-xc2" secondAttribute="centerY" id="Thn-b0-YmH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="giz-GC-zR9" secondAttribute="leading" id="YwG-ah-69X"/>
+                            <constraint firstItem="tpL-lE-xc2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="e7d-9t-8IL"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="top" secondItem="tpL-lE-xc2" secondAttribute="top" id="hiP-8s-97A"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="height" secondItem="tpL-lE-xc2" secondAttribute="height" id="qOJ-se-etY"/>
+                            <constraint firstItem="tpL-lE-xc2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qzf-7F-A1D"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1jQ-WH-E7H" secondAttribute="bottom" constant="613" id="rVo-7y-gHV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UdN-4D-TfR" secondAttribute="trailing" id="tsI-jc-5DR"/>
+                            <constraint firstItem="giz-GC-zR9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txt-Xj-O0V"/>
+                            <constraint firstItem="1jQ-WH-E7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="151" id="vaW-GG-Qdg"/>
+                            <constraint firstItem="tpL-lE-xc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="z27-Ih-z6m"/>
+                            <constraint firstItem="UdN-4D-TfR" firstAttribute="width" secondItem="tpL-lE-xc2" secondAttribute="width" id="zaO-KM-XnO"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="LimitField" destination="UdN-4D-TfR" id="BnQ-78-71B"/>
+                        <outlet property="NumberField" destination="tpL-lE-xc2" id="ajL-6y-gwf"/>
+                        <outlet property="TableView" destination="giz-GC-zR9" id="jDS-vA-dbR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="-5"/>
+        </scene>
+    </scenes>
+</document>
